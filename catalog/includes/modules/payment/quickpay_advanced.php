@@ -10,6 +10,9 @@
  * author: Genuineq office@genuineq.com
  */
 
+ /** Module version. */
+ define('MODULE_VERSION', '1.0.3');
+
 /** Compatibility fixes */
 if (!defined('DIR_WS_CLASSES')) define('DIR_WS_CLASSES','includes/classes/');
 if (!defined('DIR_WS_CATALOG_IMAGES')) define('DIR_WS_CATALOG_IMAGES', DIR_WS_CATALOG . 'images/');
@@ -540,7 +543,7 @@ class quickpay_advanced extends abstract_payment_module {
 
             'shopsystem' => [
                 'name' => "OsCommerce Phoenix",
-                'version' => "1.0.2"
+                'version' => MODULE_VERSION
             ]
         ];
 
@@ -825,7 +828,7 @@ class quickpay_advanced extends abstract_payment_module {
             $group_field = array('MODULE_PAYMENT_QUICKPAY_ADVANCED_GROUP'.$i => [
                 'title' => 'Group '.$i.' Payment Options',
                 'value' => $qp_group,
-                'desc' => 'Comma seperated Quickpay payment options that are included in Group '.$i.', maximum 255 chars (<a href=\'http://tech.quickpay.net/appendixes/payment-methods\' target=\'_blank\'><u>available options</u></a>)<br>Example: creditcard OR viabill OR dankort<br>',
+                'desc' => 'Comma seperated Quickpay payment options that are included in Group '.$i.', maximum 255 chars (<a href=\'https://learn.quickpay.net/tech-talk/appendixes/payment-methods\' target=\'_blank\'><u>available options</u></a>)<br>Example: creditcard OR viabill OR dankort<br>',
             ]);
 
             //Added a text field key for each payment group
@@ -902,6 +905,8 @@ class quickpay_advanced extends abstract_payment_module {
             case 'swish': return MODULE_PAYMENT_QUICKPAY_ADVANCED_SWISH_TEXT;
             case 'trustly': return MODULE_PAYMENT_QUICKPAY_ADVANCED_TRUSTLY_TEXT;
             case 'klarna': return MODULE_PAYMENT_QUICKPAY_ADVANCED_KLARNA_TEXT;
+            case 'apple-pay': return MODULE_PAYMENT_QUICKPAY_ADVANCED_APPLE_PAY_TEXT;
+            case 'google-pay': return MODULE_PAYMENT_QUICKPAY_ADVANCED_GOOGLE_PAY_TEXT;
 
             case 'maestro': return MODULE_PAYMENT_QUICKPAY_ADVANCED_MAESTRO_TEXT;
             case 'ideal': return MODULE_PAYMENT_QUICKPAY_ADVANCED_IDEAL_TEXT;
