@@ -2,7 +2,7 @@
 Quickpay payment module for osCommerce Phoenix
 Modular package.
 
-Version 1.0.3 - 31.03.2022
+Version 1.0.4 - 27.04.2022
 
 Compatibility:
 Quickpay API v10 with
@@ -18,6 +18,9 @@ Support thread on osCommerce forums:
 https://forums.oscommerce.com/topic/412146-quickpay-payment-module-for-23/
 
 Changelog
+### 1.0.4
+- Added check for Safari/Chrome browser
+- Fix icon aspect ratio & table align
 ### 1.0.3
 - Added Apple Pay & Google pay payment methods
 ### 1.0.2
