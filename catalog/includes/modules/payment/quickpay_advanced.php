@@ -11,7 +11,7 @@
  */
 
  /** Module version. */
- define('MODULE_VERSION', '1.0.4');
+ define('MODULE_VERSION', '1.0.5');
 
 /** Compatibility fixes */
 if (!defined('DIR_WS_CLASSES')) define('DIR_WS_CLASSES','includes/classes/');
@@ -54,6 +54,7 @@ define('MODULE_AVAILABLE_CREDITCARDS',array(
     'paysafecard',
     'resurs',
     'vipps',
+    'vippspsp',
 ));
 
 include(DIR_FS_CATALOG.DIR_WS_CLASSES.'QuickpayApi.php');
@@ -966,6 +967,7 @@ class quickpay_advanced extends abstract_payment_module {
             case 'paysafecard': return MODULE_PAYMENT_QUICKPAY_ADVANCED_PAYSAFECARD_TEXT;
             case 'resurs': return MODULE_PAYMENT_QUICKPAY_ADVANCED_RESURS_TEXT;
             case 'vipps': return MODULE_PAYMENT_QUICKPAY_ADVANCED_VIPPS_TEXT;
+            case 'vippspsp': return MODULE_PAYMENT_QUICKPAY_ADVANCED_VIPPSPSP_TEXT;
 
             // case 'danske-dk': return MODULE_PAYMENT_QUICKPAY_ADVANCED_DANSKE_DK_TEXT;
             // case 'edankort': return MODULE_PAYMENT_QUICKPAY_ADVANCED_EDANKORT_TEXT;
